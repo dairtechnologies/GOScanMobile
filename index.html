@@ -1,1 +1,23 @@
-<!DOCTYPE html>   <div id="paypal-button-container-P-80K81776N6355925DMUVCBOA"></div>  <script src="https://www.paypal.com/sdk/js?client-id=ATy8c1VLMsBuf0Qha_56ZmpHQf_Y48ip8vGLJbZdwYP5Kx7Vq-92JAw8oMBdIsxe46gkOuejZQQIBEQm&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> <script>   paypal.Buttons({       style: {           shape: 'rect',           color: 'gold',           layout: 'vertical',           label: 'subscribe'       },       createSubscription: function(data, actions) {         return actions.subscription.create({           /* Creates the subscription */           plan_id: 'P-80K81776N6355925DMUVCBOA'         });       },       onApprove: function(data, actions) {         alert(data.subscriptionID); window.AppInventor.setWebViewString("Thank you for your payment!");       }   }).render('#paypal-button-container-P-80K81776N6355925DMUVCBOA'); // Renders the PayPal button </script>  Do not share my Personal Information
+<!DOCTYPE html>
+<div id="paypal-button-container-P-0AE86129XF731641VMY6BU7Y"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Aa2CXXWbEOpumK-ARclO94x2Ye967HV_csG6m8bjB7FfetrAtG92TEdsvpXAKTe5Inp3CGVVuQKPe-jI&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-0AE86129XF731641VMY6BU7Y'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message
+        window.AppInventor.setWebViewString("Thank you for your payment!");
+      }
+  }).render('#paypal-button-container-P-0AE86129XF731641VMY6BU7Y'); // Renders the PayPal button
+</script>
